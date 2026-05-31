@@ -1,7 +1,9 @@
 # Hostinger static redirects for legacy Skarabo/Tilda paths.
-Redirect 301 /flow /blog/flow
-Redirect 301 /meditation /blog/meditation
-Redirect 301 /30-day-challenge /blog/30-day-challenge
+RedirectMatch 301 ^/blog/?$ /recipes/
+RedirectMatch 301 ^/blog/(.+)$ /recipes/$1
+Redirect 301 /flow /recipes/flow
+Redirect 301 /meditation /recipes/meditation
+Redirect 301 /30-day-challenge /recipes/30-day-challenge
 Redirect 301 /for_individuals /contact?service=individuals
 Redirect 301 /for_teams /contact?service=teams
 Redirect 301 /privacypolicy /privacy
